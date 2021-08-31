@@ -1,0 +1,14 @@
+#!/snap/bin/node
+
+let fs = require("fs");
+let Phrase = require("zaschiff-palindrome");
+
+let text = fs.readFileSync("phrases.txt", "utf-8");
+text.split("\n").forEach(function(line) {
+    let phrase = new Phrase(line);
+    if (phrase.palindrome()) {
+        //console.log("palindrome detected:", line)
+        fs.writeFileSync("palindromes.txt", line + "\n", 
+            { encoding: "utf-8", flag: "a+" }, err => {});
+    }
+});
