@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "jsdom": "^17.0.0",
+    "urllib": "^2.37.3",
+    "zaschiff-palindrome": "^0.1.1"
+  }
+}
